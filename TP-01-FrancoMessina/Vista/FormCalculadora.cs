@@ -23,7 +23,11 @@ namespace Vista
         {
             this.Limpiar();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormCalculadora_Load(object sender, EventArgs e)
         {
             this.cmbOperador.Items.Add(" ");

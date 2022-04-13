@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franc\\Desktop\\dasasdas\\tps_laboratorio_ii-master\\TP-01-FrancoMessina\\Entidades\\Entidades.csproj": {}
+    "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\franc\\Desktop\\dasasdas\\tps_laboratorio_ii-master\\TP-01-FrancoMessina\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\Desktop\\dasasdas\\tps_laboratorio_ii-master\\TP-01-FrancoMessina\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\franc\\Desktop\\dasasdas\\tps_laboratorio_ii-master\\TP-01-FrancoMessina\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\Desktop\\dasasdas\\tps_laboratorio_ii-master\\TP-01-FrancoMessina\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",

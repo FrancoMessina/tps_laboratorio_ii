@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yQwEydZoJag+HXInr+jg1SCXv12NjdRzu+rlvAJTZPX2Ou+0OIbW3sVaN4FJxBnt6NrxrWWwrWfD8/2n4n+InA==",
+  "dgSpecHash": "xiWzIEVzLRS+NUrEiPWYC8JWyeAcXdEMI172+FzuhOGFa4P83t0jJwUrw9+DDFhkaiDGht0SnF5FIV3mQ5RWDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\franc\\Desktop\\dasasdas\\tps_laboratorio_ii-master\\TP-01-FrancoMessina\\Vista\\Vista.csproj",
+  "projectFilePath": "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Vista\\Vista.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\franc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.16\\microsoft.netcore.app.host.win-x64.5.0.16.nupkg.sha512"
   ],
