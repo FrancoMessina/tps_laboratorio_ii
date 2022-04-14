@@ -43,7 +43,7 @@
             // txtNumero1
             // 
             this.txtNumero1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtNumero1.Location = new System.Drawing.Point(58, 59);
+            this.txtNumero1.Location = new System.Drawing.Point(49, 57);
             this.txtNumero1.Multiline = true;
             this.txtNumero1.Name = "txtNumero1";
             this.txtNumero1.Size = new System.Drawing.Size(109, 40);
@@ -52,7 +52,7 @@
             // txtNumero2
             // 
             this.txtNumero2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtNumero2.Location = new System.Drawing.Point(362, 59);
+            this.txtNumero2.Location = new System.Drawing.Point(353, 57);
             this.txtNumero2.Multiline = true;
             this.txtNumero2.Name = "txtNumero2";
             this.txtNumero2.Size = new System.Drawing.Size(121, 40);
@@ -63,14 +63,14 @@
             this.cmbOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOperador.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbOperador.FormattingEnabled = true;
-            this.cmbOperador.Location = new System.Drawing.Point(207, 59);
+            this.cmbOperador.Location = new System.Drawing.Point(198, 57);
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(121, 40);
             this.cmbOperador.TabIndex = 2;
             // 
             // btnOperar
             // 
-            this.btnOperar.Location = new System.Drawing.Point(53, 119);
+            this.btnOperar.Location = new System.Drawing.Point(44, 117);
             this.btnOperar.Name = "btnOperar";
             this.btnOperar.Size = new System.Drawing.Size(114, 39);
             this.btnOperar.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(207, 119);
+            this.btnLimpiar.Location = new System.Drawing.Point(198, 117);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(121, 39);
             this.btnLimpiar.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(362, 119);
+            this.btnCerrar.Location = new System.Drawing.Point(353, 117);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(121, 39);
             this.btnCerrar.TabIndex = 5;
@@ -100,9 +100,9 @@
             // 
             // btnConvertirABinario
             // 
-            this.btnConvertirABinario.Location = new System.Drawing.Point(53, 180);
+            this.btnConvertirABinario.Location = new System.Drawing.Point(44, 178);
             this.btnConvertirABinario.Name = "btnConvertirABinario";
-            this.btnConvertirABinario.Size = new System.Drawing.Size(159, 31);
+            this.btnConvertirABinario.Size = new System.Drawing.Size(159, 48);
             this.btnConvertirABinario.TabIndex = 6;
             this.btnConvertirABinario.Text = "Convertir a Binario";
             this.btnConvertirABinario.UseVisualStyleBackColor = true;
@@ -110,9 +110,9 @@
             // 
             // btnConvertirADecimal
             // 
-            this.btnConvertirADecimal.Location = new System.Drawing.Point(324, 180);
+            this.btnConvertirADecimal.Location = new System.Drawing.Point(315, 178);
             this.btnConvertirADecimal.Name = "btnConvertirADecimal";
-            this.btnConvertirADecimal.Size = new System.Drawing.Size(159, 31);
+            this.btnConvertirADecimal.Size = new System.Drawing.Size(159, 48);
             this.btnConvertirADecimal.TabIndex = 7;
             this.btnConvertirADecimal.Text = "Convertir a Decimal";
             this.btnConvertirADecimal.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             // 
             this.lstOperaciones.FormattingEnabled = true;
             this.lstOperaciones.ItemHeight = 15;
-            this.lstOperaciones.Location = new System.Drawing.Point(553, 14);
+            this.lstOperaciones.Location = new System.Drawing.Point(544, 12);
             this.lstOperaciones.Name = "lstOperaciones";
             this.lstOperaciones.Size = new System.Drawing.Size(120, 214);
             this.lstOperaciones.TabIndex = 8;
@@ -130,7 +130,7 @@
             // lblResultado
             // 
             this.lblResultado.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblResultado.Location = new System.Drawing.Point(16, 14);
+            this.lblResultado.Location = new System.Drawing.Point(7, 12);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(530, 26);
             this.lblResultado.TabIndex = 9;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 266);
+            this.ClientSize = new System.Drawing.Size(676, 251);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.lstOperaciones);
             this.Controls.Add(this.btnConvertirADecimal);

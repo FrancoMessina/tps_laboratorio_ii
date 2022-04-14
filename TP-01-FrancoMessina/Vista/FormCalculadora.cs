@@ -11,6 +11,10 @@ namespace Vista
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Limpia los textbox y los pone sin valor, el operador del combobox 
+        /// en vacio y el resultado con el valor 0.
+        /// </summary
         private void Limpiar()
         {
             this.txtNumero1.Text = string.Empty;
@@ -18,13 +22,18 @@ namespace Vista
             this.cmbOperador.SelectedIndex = 0;
             this.lblResultado.Text = "0";
         }
-
+        /// <summary>
+        /// LLama al metodo Limpiar.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             this.Limpiar();
         }
         /// <summary>
-        /// 
+        /// Carga en el formulario antes de que inicie los items del combobox, el resultado en 0, y 
+        /// el operador en la posician 0 donde esta el valor " "
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -38,6 +47,13 @@ namespace Vista
             this.lblResultado.Text = "0";
             this.cmbOperador.SelectedIndex = 0;
         }
+        /// <summary>
+        /// Resuelve la operacion, utilizando los dos numeros y el operador.
+        /// </summary>
+        /// <param name="numero1">Primer operando</param>
+        /// <param name="numero2">Segundo Operando</param>
+        /// <param name="operador">Operador que indica que tipo de operacion lleva a cabo.</param>
+        /// <returns>Retorna el resultado de la operacion.</returns>
         private static double Operar(string numero1, string numero2, string operador)
         {
             Operando operadorUno = new Operando(numero1);
@@ -45,12 +61,23 @@ namespace Vista
             Calculadora nuevaCalculadora = new Calculadora();
             return nuevaCalculadora.Operar(operadorUno, operadorDos, Convert.ToChar(operador));
         }
-
+        /// <summary>
+        /// Cierra el formulario con confirmacion de si deseas cerrarlo o no.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// Realiza la operacion que desee el usuario, y tiene varias salidas.
+        /// Por ejem: Division por 0 arroja que no se puede divdir por 0.
+        /// Verifica si se se ingresaron los dos valores.
+        /// Verifica si se ingresaron letras.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
             string numeroUno = this.txtNumero1.Text;
@@ -65,7 +92,7 @@ namespace Vista
             {
                 resultadoCuenta = Operar(numeroUno, numeroDos, operador);
                 this.lblResultado.Text = resultadoCuenta.ToString();
-                //mensaje = operador == " " ? $"{numeroUno} + {numeroDos} = {resultadoCuenta}" : $"{numeroUno} {operador} {numeroDos} = {resultadoCuenta}";
+                //mensaje = operador == " " ? $"{numeroUno} + {numeroDos} = {resultadoCuenta}" : $"{numeroUno} {operador} {numeroDos} = {resultadoCuenta}";//Probando Ternario
                 if (operador == " ")
                 {
                     mensaje = $"{numeroUno} + {numeroDos} = {resultadoCuenta}";
@@ -93,7 +120,11 @@ namespace Vista
             else
                 MessageBox.Show("Ingresar un numero válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
+        /// <summary>
+        /// Convierte el resultado en decimal a binario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(lblResultado.Text) || lblResultado.Text == mensajeError)
@@ -111,7 +142,11 @@ namespace Vista
             }
            
         }
-
+        /// <summary>
+        /// Convierte el resultado en binario a Decimal.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(lblResultado.Text) || lblResultado.Text == mensajeError)
@@ -128,7 +163,11 @@ namespace Vista
             }
             
         }
-
+        /// <summary>
+        /// Evento para que cada vez que el usuario quiera cerrar el form, se le pregunte si desea cerrarlo.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormCalculadora_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialogRespuesta = MessageBox.Show("¿Seguro de queres salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
