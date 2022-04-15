@@ -15,6 +15,7 @@ namespace Vista
         /// Limpia los textbox y los pone sin valor, el operador del combobox 
         /// en vacio y el resultado con el valor 0.
         /// </summary
+   
         private void Limpiar()
         {
             this.txtNumero1.Text = string.Empty;
@@ -22,11 +23,13 @@ namespace Vista
             this.cmbOperador.SelectedIndex = 0;
             this.lblResultado.Text = "0";
         }
+
         /// <summary>
         /// LLama al metodo Limpiar.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+       
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             this.Limpiar();
