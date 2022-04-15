@@ -22,6 +22,7 @@ namespace Vista
             this.txtNumero2.Text = string.Empty;
             this.cmbOperador.SelectedIndex = 0;
             this.lblResultado.Text = "0";
+            this.lblResultado.ForeColor = Color.Black;
         }
 
         /// <summary>
