@@ -11,18 +11,7 @@ namespace Vista
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// Limpia los textbox y los pone sin valor, el operador del combobox 
-        /// en vacio y el resultado con el valor 0.
-        /// </summary
-   
-        private void Limpiar()
-        {
-            this.txtNumero1.Text = string.Empty;
-            this.txtNumero2.Text = string.Empty;
-            this.cmbOperador.SelectedIndex = 0;
-            this.lblResultado.Text = "0";
-        }
+        
 
         /// <summary>
         /// LLama al metodo Limpiar.
@@ -33,6 +22,17 @@ namespace Vista
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             this.Limpiar();
+        }
+        /// <summary>
+        /// Limpia los textbox y los pone sin valor, el operador del combobox en vacio y el resultado con el valor 0.
+        /// </summary
+
+        private void Limpiar()
+        {
+            this.txtNumero1.Text = string.Empty;
+            this.txtNumero2.Text = string.Empty;
+            this.cmbOperador.SelectedIndex = 0;
+            this.lblResultado.Text = "0";
         }
         /// <summary>
         /// Carga en el formulario antes de que inicie los items del combobox, el resultado en 0, y 
