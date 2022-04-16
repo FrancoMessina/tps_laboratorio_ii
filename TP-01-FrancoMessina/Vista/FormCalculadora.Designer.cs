@@ -56,7 +56,7 @@
             this.txtNumero2.Multiline = true;
             this.txtNumero2.Name = "txtNumero2";
             this.txtNumero2.Size = new System.Drawing.Size(121, 40);
-            this.txtNumero2.TabIndex = 1;
+            this.txtNumero2.TabIndex = 2;
             // 
             // cmbOperador
             // 
@@ -66,7 +66,7 @@
             this.cmbOperador.Location = new System.Drawing.Point(198, 57);
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(121, 40);
-            this.cmbOperador.TabIndex = 2;
+            this.cmbOperador.TabIndex = 1;
             // 
             // btnOperar
             // 
@@ -125,7 +125,7 @@
             this.lstOperaciones.Location = new System.Drawing.Point(544, 12);
             this.lstOperaciones.Name = "lstOperaciones";
             this.lstOperaciones.Size = new System.Drawing.Size(120, 214);
-            this.lstOperaciones.TabIndex = 8;
+            this.lstOperaciones.TabIndex = 9;
             // 
             // lblResultado
             // 
@@ -133,7 +133,7 @@
             this.lblResultado.Location = new System.Drawing.Point(7, 12);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(530, 26);
-            this.lblResultado.TabIndex = 9;
+            this.lblResultado.TabIndex = 8;
             this.lblResultado.Text = "0";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
