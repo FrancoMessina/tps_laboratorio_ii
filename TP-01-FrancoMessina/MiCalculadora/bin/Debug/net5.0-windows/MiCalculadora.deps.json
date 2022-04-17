@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "Vista/1.0.0": {
+      "MiCalculadora/1.0.0": {
         "dependencies": {
           "Entidades": "1.0.0"
         },
         "runtime": {
-          "Vista.dll": {}
+          "MiCalculadora.dll": {}
         }
       },
       "Entidades/1.0.0": {
@@ -22,7 +22,7 @@
     }
   },
   "libraries": {
-    "Vista/1.0.0": {
+    "MiCalculadora/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

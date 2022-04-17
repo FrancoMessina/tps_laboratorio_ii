@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Vista\\Vista.csproj": {}
+    "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\MiCalculadora\\MiCalculadora.csproj": {}
   },
   "projects": {
     "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Entidades\\Entidades.csproj": {
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Vista\\Vista.csproj": {
+    "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\MiCalculadora\\MiCalculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Vista\\Vista.csproj",
-        "projectName": "Vista",
-        "projectPath": "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Vista\\Vista.csproj",
+        "projectUniqueName": "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\MiCalculadora\\MiCalculadora.csproj",
+        "projectName": "MiCalculadora",
+        "projectPath": "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\MiCalculadora\\MiCalculadora.csproj",
         "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\Vista\\obj\\",
+        "outputPath": "C:\\Users\\franc\\Desktop\\tps_laboratorio_ii\\TP-01-FrancoMessina\\MiCalculadora\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
