@@ -17,3 +17,9 @@ C:\Users\franc\Desktop\tps_laboratorio_ii\TP-02-FrancoMessina\TP-02\Entidades\ob
 C:\Users\franc\Desktop\tps_laboratorio_ii\TP-02-FrancoMessina\TP-02\Entidades\obj\Debug\Entidades.pdb
 C:\Users\franc\Desktop\tps_laboratorio_ii\TP-02-FrancoMessina\TP-02\Entidades\bin\Debug\Entidades.dll
 C:\Users\franc\Desktop\tps_laboratorio_ii\TP-02-FrancoMessina\TP-02\Entidades\bin\Debug\Entidades.pdb
+C:\Users\franc\Desktop\tps_laboratorio_ii\TP-02-FrancoMessina\Entidades\bin\Debug\Entidades.dll
+C:\Users\franc\Desktop\tps_laboratorio_ii\TP-02-FrancoMessina\Entidades\bin\Debug\Entidades.pdb
+C:\Users\franc\Desktop\tps_laboratorio_ii\TP-02-FrancoMessina\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\franc\Desktop\tps_laboratorio_ii\TP-02-FrancoMessina\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\franc\Desktop\tps_laboratorio_ii\TP-02-FrancoMessina\Entidades\obj\Debug\Entidades.dll
+C:\Users\franc\Desktop\tps_laboratorio_ii\TP-02-FrancoMessina\Entidades\obj\Debug\Entidades.pdb

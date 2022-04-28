@@ -39,7 +39,7 @@ namespace Entidades
             }
         }
 
-        public override string Mostrar()
+        public override sealed string Mostrar()
         {
             StringBuilder datos = new StringBuilder();
 
