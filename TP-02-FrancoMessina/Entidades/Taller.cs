@@ -110,7 +110,7 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator -(Taller taller, Vehiculo vehiculo)
         {
-            if (!(taller is null) && !(vehiculo is null))
+            if (!(taller is null) && !(vehiculo is null) && taller.vehiculos.Count > 0)
             {
                 foreach (Vehiculo v in taller.vehiculos)
                 {
