@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vista", "Vista\Vista.csproj", "{13ECF92A-0DB0-4415-A103-351A277299F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsProyecto", "TestServicio\TestsProyecto.csproj", "{5AE044CF-C383-4EA1-8F37-88957AB68468}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{13ECF92A-0DB0-4415-A103-351A277299F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13ECF92A-0DB0-4415-A103-351A277299F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13ECF92A-0DB0-4415-A103-351A277299F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AE044CF-C383-4EA1-8F37-88957AB68468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE044CF-C383-4EA1-8F37-88957AB68468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE044CF-C383-4EA1-8F37-88957AB68468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE044CF-C383-4EA1-8F37-88957AB68468}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.IO;
+using Entidades.ValidacionesCliente;
 using System.Windows.Forms;
 using Entidades;
 using Entidades.Excepciones;
@@ -22,7 +22,7 @@ namespace Vista
             try
             {
                 Serializador<List<Cliente>> serializador = new Serializador<List<Cliente>>(GestorDeArchivo.ETipoArchivo.XML);
-                gestionServicios.ListaClientes = serializador.Leer("ListaClientes.xml");             
+                gestionServicios.ListaClientes = serializador.Leer("ListaClientes.xml");
             }
             catch (Exception)
             {
@@ -41,10 +41,10 @@ namespace Vista
         {
             try
             {
-                if (ValidarCamposCliente(txtNombre.Text, txtApellido.Text, txtDni.Text, txtTelefono.Text))
+                if (ValidarCliente.ValidarCamposCliente(txtNombre.Text, txtApellido.Text, txtDni.Text, txtTelefono.Text))
                 {
                     
-                    if (ValidarNombre(txtNombre.Text) && ValidarApellido(txtApellido.Text) && ValidarDni(txtDni.Text) && ValidarNumeroTel(txtTelefono.Text))
+                    if (ValidarCliente.ValidarNombre(txtNombre.Text) && ValidarCliente.ValidarApellido(txtApellido.Text) && ValidarCliente.ValidarDni(txtDni.Text) && ValidarCliente.ValidarNumeroTel(txtTelefono.Text))
                     {
                         Cliente cliente = new Cliente(txtDni.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text);
                         string mensaje = gestionServicios + cliente;
@@ -74,7 +74,7 @@ namespace Vista
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch (NumeroInvalidoExcepcion ex)
+            catch (NumeroInvalidoExcepction ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -88,9 +88,9 @@ namespace Vista
         {
             try
             {
-                if (ValidarCamposCliente(txtNombre.Text, txtApellido.Text, txtDni.Text, txtTelefono.Text) && ValidarExisteClienteEnLista())
+                if (ValidarCliente.ValidarCamposCliente(txtNombre.Text, txtApellido.Text, txtDni.Text, txtTelefono.Text) && ValidarExisteClienteEnLista())
                 {
-                    if(ValidarNombre(txtNombre.Text) && ValidarApellido(txtApellido.Text) && ValidarDni(txtDni.Text) && ValidarNumeroTel(txtTelefono.Text))
+                    if(ValidarCliente.ValidarNombre(txtNombre.Text) && ValidarCliente.ValidarApellido(txtApellido.Text) && ValidarCliente.ValidarDni(txtDni.Text) && ValidarCliente.ValidarNumeroTel(txtTelefono.Text))
                     {
                         string mensaje = string.Empty;
                         Cliente cliente = (Cliente)lstClientes.SelectedItem;
@@ -125,7 +125,7 @@ namespace Vista
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch(NumeroInvalidoExcepcion ex)
+            catch(NumeroInvalidoExcepction ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -281,72 +281,6 @@ namespace Vista
             return servicio;
         }
 
-        private bool ValidarCamposCliente(string nombre, string apellido, string dni, string numeroTel)
-        {
-            if (string.IsNullOrWhiteSpace(nombre)|| string.IsNullOrWhiteSpace(apellido) || string.IsNullOrWhiteSpace(dni) || string.IsNullOrWhiteSpace(numeroTel))
-            {
-                throw new CamposVaciosONullException("Cargar todos los datos del cliente!");
-            }
-            return true;
-          
-        }
-        private bool ValidarNombre(string nombre)
-        {
-            if (nombre.Length > 20 || nombre.Length < 3)
-            {
-                throw new NombreInvalidoException("El nombre tiene que tener más de 3 letras y menos de 20");
-            }
-            else if (!VerificarContieneSoloLetras(nombre))
-            {
-                throw new NombreInvalidoException("El nombre tiene que contener solo letras.");
-            }
-            return true;
-        }
-        private bool ValidarApellido(string apellido)
-        {
-            if (apellido.Length > 20 || apellido.Length < 3)
-            {
-                throw new ApellidoInvalidoException("El apellido tiene que tener más de 3 letras y menos de 20");
-            }
-            else if (!VerificarContieneSoloLetras(apellido))
-            {
-                throw new ApellidoInvalidoException("El apellido tiene que contener solo letras.");
-            }
-            return true;
-        }
-        private bool ValidarDni(string dni)
-        {
-            if (!double.TryParse(dni, out double dniAux))
-            {
-                throw new DniInvalidoException("El Dni tiene que ser númerico!");
-            }
-            else if (dniAux < 0 || dniAux > 999999999)
-            {
-                throw new DniInvalidoException("DNI INVALIDO!");
-            }
-            return true;
-        }
-        private bool ValidarNumeroTel(string numeroTel)
-        {
-            if (!double.TryParse(numeroTel, out double auxNumeroTel))
-            {
-                throw new NumeroInvalidoExcepcion("El Número de telefono tiene que ser númerico!");
-            }
-            else if (numeroTel.Length != 10)
-            {
-                throw new NumeroInvalidoExcepcion("Los numeros telefonicos tienen 10 digitos!");
-            }
-            return true;
-        }
-        private bool VerificarContieneSoloLetras(string nombre)
-        {
-            foreach (char letra in nombre)
-            {
-                if (!Char.IsLetter(letra))
-                    return false;
-            }
-            return true;
-        }
         private bool ValidarExisteClienteEnLista()
         {
             int index = lstClientes.SelectedIndex;

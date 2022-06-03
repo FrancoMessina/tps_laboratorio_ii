@@ -28,7 +28,7 @@ namespace Entidades
                 {
                     switch (falla)
                     {
-                        case "NoEmiteSeñal":
+                        case "NoEmiteSenial":
                             precio += 600;
                             break;
                         case "NoFuncionaBoton":
@@ -50,7 +50,7 @@ namespace Entidades
                             precio += 700;
                             break;
                         case "NoEmiteSenial":
-                            precio += 460;
+                            precio += 600;
                             break;
                         case "BajaSenial":
                             precio += 300;
