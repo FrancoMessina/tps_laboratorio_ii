@@ -42,3 +42,5 @@ C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-Franco
 C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Vista\obj\Debug\net5.0-windows\Vista.pdb
 C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Vista\obj\Debug\net5.0-windows\Vista.genruntimeconfig.cache
 C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Vista\obj\Debug\net5.0-windows\ref\Vista.dll
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Vista\obj\Debug\net5.0-windows\Vista.frmRegistro.resources
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Vista\obj\Debug\net5.0-windows\Vista.frmModificar.resources

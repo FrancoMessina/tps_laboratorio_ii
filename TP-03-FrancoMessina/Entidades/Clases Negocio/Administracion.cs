@@ -74,13 +74,17 @@ namespace Entidades
             string mensaje = "No existe el cliente";
             if (clientes is not null && clienteAModificar is not null && clienteModificado is not null)
             {
-                if (clientes == clienteAModificar)
+                int index = clientes.listaClientes.IndexOf(clienteAModificar);
+                if (!Cliente.VerificarClienteDuplicado(clientes.ListaClientes, clienteModificado,index))
                 {
-                    int index = clientes.listaClientes.IndexOf(clienteAModificar);
-                    clientes.listaClientes[index] = clienteModificado;
+                    clienteAModificar.Nombre = clienteModificado.Nombre;
+                    clienteAModificar.Apellido = clienteModificado.Apellido;
+                    clienteAModificar.Dni = clienteModificado.Dni;
+                    clienteAModificar.NumeroTel = clienteModificado.NumeroTel;
                     mensaje = "Cliente modificado con exito";
-                    return mensaje;
                 }
+                else
+                    mensaje = "Ese DNI ya existe!";
             }
             else if(clienteAModificar is null)
             {

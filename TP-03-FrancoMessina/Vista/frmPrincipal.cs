@@ -39,99 +39,31 @@ namespace Vista
         }
         private void btnRegistarse_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (ValidarCliente.ValidarCamposCliente(txtNombre.Text, txtApellido.Text, txtDni.Text, txtTelefono.Text))
-                {
-                    
-                    if (ValidarCliente.ValidarNombre(txtNombre.Text) && ValidarCliente.ValidarApellido(txtApellido.Text) && ValidarCliente.ValidarDni(txtDni.Text) && ValidarCliente.ValidarNumeroTel(txtTelefono.Text))
-                    {
-                        Cliente cliente = new Cliente(txtDni.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text);
-                        string mensaje = gestionServicios + cliente;
-                        MessageBox.Show(mensaje);
-                        ActualizarListaClientes();
-                        LimpiarCamposCliente();
-                    }  
-                }
-            }
-            catch (CamposVaciosONullException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (ClienteNoExistenteException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (NombreInvalidoException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (DniInvalidoException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (ApellidoInvalidoException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (NumeroInvalidoExcepction ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error.Ingrese los datos nuevamente!");
-            }
+            frmRegistro formRegistro = new frmRegistro(gestionServicios);
+            formRegistro.ShowDialog();
+            this.ActualizarListaClientes();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (ValidarCliente.ValidarCamposCliente(txtNombre.Text, txtApellido.Text, txtDni.Text, txtTelefono.Text) && ValidarExisteClienteEnLista())
+                if (ValidarExisteClienteEnLista())
                 {
-                    if(ValidarCliente.ValidarNombre(txtNombre.Text) && ValidarCliente.ValidarApellido(txtApellido.Text) && ValidarCliente.ValidarDni(txtDni.Text) && ValidarCliente.ValidarNumeroTel(txtTelefono.Text))
-                    {
-                        string mensaje = string.Empty;
-                        Cliente cliente = (Cliente)lstClientes.SelectedItem;
-                        Cliente nuevoCliente = new Cliente(txtDni.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text);
-                        mensaje = Administracion.ModificarCliente(gestionServicios, cliente, nuevoCliente);
-                        if (cliente is not null)
-                        {
-                            LimpiarCamposCliente();
-                            ActualizarListaClientes();
-                        }
-                        MessageBox.Show(mensaje);
-                    }                                        
+                    int index = lstClientes.SelectedIndex;
+                    Cliente cliente = (Cliente)lstClientes.SelectedItem;
+                    frmModificar formModificar = new frmModificar(gestionServicios, cliente);
+                    formModificar.ShowDialog();
+                    this.ActualizarListaClientes();
                 }
-            }
-            catch (CamposVaciosONullException ex)
-            {
-                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             catch (ClienteNoExistenteException ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            catch(NombreInvalidoException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch(DniInvalidoException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch(ApellidoInvalidoException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch(NumeroInvalidoExcepction ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
             catch (Exception)
             {
-                MessageBox.Show("Error.Ingrese los datos nuevamente!");
+                MessageBox.Show("Error!");
             }
         }
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -144,7 +76,6 @@ namespace Vista
                     Cliente cliente = (Cliente)lstClientes.SelectedItem;
                     string mensaje = gestionServicios - cliente;
                     ActualizarListaClientes();
-                    LimpiarCamposCliente();
                     MessageBox.Show($"{mensaje}");
                 }
             }
@@ -218,18 +149,6 @@ namespace Vista
 
         }
 
-        private void lstClientes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = lstClientes.SelectedIndex;
-            if (index != -1)
-            {
-                txtNombre.Text = gestionServicios.ListaClientes[index].Nombre;
-                txtApellido.Text = gestionServicios.ListaClientes[index].Apellido;
-                txtTelefono.Text = gestionServicios.ListaClientes[index].NumeroTel;
-                txtDni.Text = gestionServicios.ListaClientes[index].Dni;
-            }
-
-        }
         private List<string> CargarFallas()
         {
             List<string> fallas = new List<string>();
@@ -293,13 +212,6 @@ namespace Vista
                 throw new ClienteNoExistenteException("No hay ningun cliente seleccionado!");
             }
             return true;
-        }
-        private void LimpiarCamposCliente()
-        {
-            txtNombre.Text = string.Empty;
-            txtApellido.Text = string.Empty;
-            txtTelefono.Text = string.Empty;
-            txtDni.Text = string.Empty;
         }
         private void cmbProductos_SelectedIndexChanged(object sender, EventArgs e)
         {

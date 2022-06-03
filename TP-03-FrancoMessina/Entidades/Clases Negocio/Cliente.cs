@@ -44,6 +44,18 @@ namespace Entidades
         {
             return !(a == b);
         }
+        public static bool VerificarClienteDuplicado(List<Cliente> lista, Cliente a, int index)
+        {
+            if(lista is not null && a is not null)
+            {
+                for(int i = 0; i < lista.Count; i++)
+                {
+                    if (lista[i] == a && i != index)
+                        return true;
+                }
+            }
+            return false;
+        }
         public override string ToString()
         {
             StringBuilder datos = new StringBuilder();
