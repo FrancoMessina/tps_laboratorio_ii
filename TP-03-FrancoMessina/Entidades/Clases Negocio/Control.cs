@@ -16,9 +16,17 @@ namespace Entidades
         {
 
         }
+        /// <summary>
+        /// Propiedad publica: Retornará el tipo de control (TV/AIRE) y se seteara el tipo de control.
+        /// </summary>
         public ETipoControl Tipo { get { return this.tipo; } set { this.tipo = value; } }
 
 
+        /// <summary>
+        /// Se calcula el costo del servicio analizando la cantidad de fallas que tiene el producto y distintos
+        /// tipos de fallo dependiendo de si ES TV/AIRE.
+        /// </summary>
+        /// <returns>Retorna el costo del servicio.</returns>
         public override float CalcularCosto()
         {
             float precio = 0;
@@ -60,7 +68,10 @@ namespace Entidades
             }
             return precio;
         }
-
+        /// <summary>
+        /// Override de ToString que vamos a utilizar para mostrar el Tipo de Control y los datos de la clase base.
+        /// </summary>
+        /// <returns>Un string con los datos del Control</returns>
         public override string ToString()
         {
             return $"Tipo Control: {this.tipo}\t {base.ToString()}"; 

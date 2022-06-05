@@ -8,12 +8,15 @@ namespace Vista
     public partial class frmRegistro : Form
     {
         private Administracion gestionServicios;
-        public frmRegistro(Administracion gestionServicios)
+        public frmRegistro()
         {
             InitializeComponent();
+
+        }
+        public frmRegistro(Administracion gestionServicios) : this()
+        {
             this.gestionServicios = gestionServicios;
         }
-
         private void btnRegistarse_Click(object sender, EventArgs e)
         {
             try
@@ -25,16 +28,12 @@ namespace Vista
                     {
                         Cliente cliente = new Cliente(txtDni.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text);
                         string mensaje = gestionServicios + cliente;
-                        this.LimpiarCamposCliente();
-                        MessageBox.Show(mensaje);
+                        MessageBox.Show(mensaje,"Registro",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        this.DialogResult = DialogResult.OK;
                     }
                 }
             }
             catch (CamposVaciosONullException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            catch (ClienteNoExistenteException ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -59,12 +58,10 @@ namespace Vista
                 MessageBox.Show("Error.Ingrese los datos nuevamente!");
             }
         }
-        private void LimpiarCamposCliente()
+
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            txtNombre.Text = string.Empty;
-            txtApellido.Text = string.Empty;
-            txtTelefono.Text = string.Empty;
-            txtDni.Text = string.Empty;
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

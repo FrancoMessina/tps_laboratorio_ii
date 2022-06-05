@@ -13,6 +13,10 @@ namespace Entidades
 
         }
 
+        /// <summary>
+        /// Se calcula el costo del servicio analizando la cantidad de fallas que tiene el producto.
+        /// </summary>
+        /// <returns>Retorna el costo del servicio.</returns>
         public override float CalcularCosto()
         {
             float precio = 0;

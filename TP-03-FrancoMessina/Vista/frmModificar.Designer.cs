@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gpbModificar = new System.Windows.Forms.GroupBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             // gpbModificar
             // 
             this.gpbModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gpbModificar.Controls.Add(this.btnSalir);
             this.gpbModificar.Controls.Add(this.txtTelefono);
             this.gpbModificar.Controls.Add(this.txtDni);
             this.gpbModificar.Controls.Add(this.btnModificar);
@@ -61,6 +63,17 @@
             this.gpbModificar.TabStop = false;
             this.gpbModificar.Text = "Cliente";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Location = new System.Drawing.Point(330, 252);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(186, 43);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(253, 196);
@@ -77,7 +90,8 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(198, 252);
+            this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnModificar.Location = new System.Drawing.Point(84, 252);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(186, 43);
             this.btnModificar.TabIndex = 4;
@@ -88,18 +102,20 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(158, 199);
+            this.lblTelefono.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblTelefono.Location = new System.Drawing.Point(131, 200);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(78, 17);
+            this.lblTelefono.Size = new System.Drawing.Size(97, 21);
             this.lblTelefono.TabIndex = 6;
             this.lblTelefono.Text = "Numero Tel";
             // 
             // lblDni
             // 
             this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(158, 150);
+            this.lblDni.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblDni.Location = new System.Drawing.Point(131, 151);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(31, 17);
+            this.lblDni.Size = new System.Drawing.Size(39, 21);
             this.lblDni.TabIndex = 1;
             this.lblDni.Text = "Dni";
             // 
@@ -113,14 +129,16 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(158, 98);
+            this.lblApellido.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblApellido.Location = new System.Drawing.Point(131, 99);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(60, 17);
+            this.lblApellido.Size = new System.Drawing.Size(73, 21);
             this.lblApellido.TabIndex = 2;
             this.lblApellido.Text = "Apellido";
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtNombre.Location = new System.Drawing.Point(253, 43);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(131, 25);
@@ -129,9 +147,10 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(158, 43);
+            this.lblNombre.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblNombre.Location = new System.Drawing.Point(131, 43);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(56, 17);
+            this.lblNombre.Size = new System.Drawing.Size(70, 21);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre";
             // 
@@ -166,5 +185,6 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

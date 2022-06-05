@@ -38,12 +38,14 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.gpbRegistro.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbRegistro
             // 
             this.gpbRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gpbRegistro.Controls.Add(this.btnSalir);
             this.gpbRegistro.Controls.Add(this.txtTelefono);
             this.gpbRegistro.Controls.Add(this.txtDni);
             this.gpbRegistro.Controls.Add(this.btnRegistarse);
@@ -77,9 +79,10 @@
             // 
             // btnRegistarse
             // 
-            this.btnRegistarse.Location = new System.Drawing.Point(171, 256);
+            this.btnRegistarse.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnRegistarse.Location = new System.Drawing.Point(76, 258);
             this.btnRegistarse.Name = "btnRegistarse";
-            this.btnRegistarse.Size = new System.Drawing.Size(213, 43);
+            this.btnRegistarse.Size = new System.Drawing.Size(210, 43);
             this.btnRegistarse.TabIndex = 4;
             this.btnRegistarse.Text = "Registrarse";
             this.btnRegistarse.UseVisualStyleBackColor = true;
@@ -135,6 +138,17 @@
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Location = new System.Drawing.Point(308, 258);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(210, 43);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -166,5 +180,6 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

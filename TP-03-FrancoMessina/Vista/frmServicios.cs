@@ -8,7 +8,7 @@ namespace Vista
     public partial class frmServicios : Form
     {
         private Administracion gestionServicios;
-        Cliente cliente;
+        private Cliente cliente;
         int indexCliente;
         public frmServicios(Administracion gestionServicios, Cliente cliente)
         {
@@ -84,7 +84,7 @@ namespace Vista
                 {
                     Servicio servicio = (Servicio)lstServicios.SelectedItem;
                     ArchivoTXT archivoTexto = new ArchivoTXT();
-                    string mensaje = archivoTexto.Escribir($"{cliente.Nombre}{cliente.Apellido}", Servicio.GenerarFactura(servicio));
+                    string mensaje = archivoTexto.Escribir($"{cliente.Nombre}{cliente.Apellido}", Servicio.GenerarTicket(cliente, servicio));
                     MessageBox.Show(mensaje, "Ticket generado", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
 

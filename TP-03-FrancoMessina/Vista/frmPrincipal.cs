@@ -75,8 +75,8 @@ namespace Vista
                     int index = lstClientes.SelectedIndex;
                     Cliente cliente = (Cliente)lstClientes.SelectedItem;
                     string mensaje = gestionServicios - cliente;
-                    ActualizarListaClientes();
-                    MessageBox.Show($"{mensaje}");
+                    this.ActualizarListaClientes();
+                    MessageBox.Show(mensaje,"Eliminar",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
             }
             catch (ClienteNoExistenteException ex)
@@ -100,8 +100,8 @@ namespace Vista
                     if (cliente is not null)
                     {
                         mensaje = AgregarServicio(cliente, producto);
-                        LimpiarCheckBox();
-                        MessageBox.Show(mensaje);
+                        this.LimpiarCheckBox();
+                        MessageBox.Show(mensaje,"Cargar servicio",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }
                     
                 }
@@ -145,7 +145,7 @@ namespace Vista
         private void ActualizarListaClientes()
         {
             this.lstClientes.DataSource = null;
-            this.lstClientes.DataSource = gestionServicios.ListaClientes;
+            this.lstClientes.DataSource = gestionServicios.ListaClienteAlta();
 
         }
 
@@ -367,6 +367,13 @@ namespace Vista
         {
             lblFecha.Text = DateTime.Now.ToString("dddd MMMM yyyy");
             lblHora.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btnRecuperarCliente_Click(object sender, EventArgs e)
+        {
+            frmHabilitarCliente formRegistro = new frmHabilitarCliente(gestionServicios);
+            formRegistro.ShowDialog();
+            this.ActualizarListaClientes();
         }
     }
 }

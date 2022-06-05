@@ -58,6 +58,7 @@
             this.timerHoraFecha = new System.Windows.Forms.Timer(this.components);
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.btnRecuperarCliente = new System.Windows.Forms.Button();
             this.gpbProducto.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -343,7 +344,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblHora.Location = new System.Drawing.Point(876, 135);
+            this.lblHora.Location = new System.Drawing.Point(876, 204);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(0, 22);
             this.lblHora.TabIndex = 10;
@@ -353,10 +354,21 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Arial", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFecha.Location = new System.Drawing.Point(876, 102);
+            this.lblFecha.Location = new System.Drawing.Point(876, 171);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(0, 23);
             this.lblFecha.TabIndex = 11;
+            // 
+            // btnRecuperarCliente
+            // 
+            this.btnRecuperarCliente.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnRecuperarCliente.Location = new System.Drawing.Point(876, 72);
+            this.btnRecuperarCliente.Name = "btnRecuperarCliente";
+            this.btnRecuperarCliente.Size = new System.Drawing.Size(182, 44);
+            this.btnRecuperarCliente.TabIndex = 12;
+            this.btnRecuperarCliente.Text = "Recuperar Cliente";
+            this.btnRecuperarCliente.UseVisualStyleBackColor = true;
+            this.btnRecuperarCliente.Click += new System.EventHandler(this.btnRecuperarCliente_Click);
             // 
             // frmPrincipal
             // 
@@ -364,6 +376,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1093, 673);
+            this.Controls.Add(this.btnRecuperarCliente);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.btnModificar);
@@ -418,5 +431,6 @@
         private System.Windows.Forms.Timer timerHoraFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Button btnRecuperarCliente;
     }
 }

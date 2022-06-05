@@ -27,7 +27,8 @@ namespace Vista
                         string mensaje = string.Empty;
                         Cliente nuevoCliente = new Cliente(txtDni.Text, txtNombre.Text, txtApellido.Text, txtTelefono.Text);
                         mensaje = Administracion.ModificarCliente(gestionServicios, cliente, nuevoCliente);
-                        MessageBox.Show(mensaje);
+                        MessageBox.Show(mensaje,"Modificacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        this.DialogResult = DialogResult.OK;
                     }
                 }
             }
@@ -72,6 +73,11 @@ namespace Vista
         private void frmModificar_Load(object sender, EventArgs e)
         {
             this.CargarDatos();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }
