@@ -19,7 +19,8 @@ namespace Entidades.ValidacionesCliente
         /// <exception cref="CamposVaciosONullException">Lanza la excepcion si algun cliente es null.</exception>
         public static bool ValidarCamposCliente(string nombre, string apellido, string dni, string numeroTel)
         {
-            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(apellido) || string.IsNullOrWhiteSpace(dni) || string.IsNullOrWhiteSpace(numeroTel))
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(apellido) || string.IsNullOrWhiteSpace(dni)
+                || string.IsNullOrWhiteSpace(numeroTel))
             {
                 throw new CamposVaciosONullException("Cargar todos los datos del cliente!");
             }
