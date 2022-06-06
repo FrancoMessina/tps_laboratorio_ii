@@ -15,7 +15,11 @@ namespace Vista
             this.gestionServicios = gestionServicios;
             this.cliente = cliente;
         }
-
+        /// <summary>
+        /// Modifica los datos del cliente seleccionado.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModificar_Click(object sender, EventArgs e)
         {
             try
@@ -62,6 +66,9 @@ namespace Vista
             }
         
         }
+        /// <summary>
+        /// Carga los datos en los textbox del cliente seleccionado en el form principal.
+        /// </summary>
         private void CargarDatos()
         {
             this.txtNombre.Text = cliente.Nombre;
@@ -69,12 +76,20 @@ namespace Vista
             this.txtDni.Text = cliente.Dni;
             this.txtTelefono.Text = cliente.NumeroTel;
         }
-
+        /// <summary>
+        /// Carga los datos del cliente.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmModificar_Load(object sender, EventArgs e)
         {
             this.CargarDatos();
         }
-
+        /// <summary>
+        /// Sale del formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

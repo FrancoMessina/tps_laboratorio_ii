@@ -14,7 +14,14 @@ namespace Entidades.Gestor_de_Archivos
         public Serializador(ETipoArchivo tipoArchivo) : base(tipoArchivo)
         {
         }
-
+        /// <summary>
+        /// El metodo va a serializar un elemento Generico y lo va a guardar en un archivo en formato XML.Tambien
+        /// va a recibir el nombre del archivo.
+        /// </summary>
+        /// <param name="nombreArchivo">Nombre del archivo que vamos a Escribir</param>
+        /// <param name="elemento">nombre del Elemento a serializar</param>
+        /// <returns>Retorna un string dependiendo el caso.</returns>
+        /// <exception cref="ArchivoSerializacionException">Lanza una excepcion cuando el tipo de extension no es XML.</exception>
         public string Escribir(string nombreArchivo, T elemento)
         {
             try
@@ -46,6 +53,12 @@ namespace Entidades.Gestor_de_Archivos
             }
         }
 
+        /// <summary>
+        /// Leer un archivo de tipo XML.
+        /// </summary>
+        /// <param name="nombreArchivo">Nombre del archivo que queremos leer.</param>
+        /// <returns>Retorna el tipo generico que leimos del archivo.</returns>
+        /// <exception cref="ArchivoSerializacionException">Lanza una excepcion cuando el tipo de extension no es XML.</exception>
         public T Leer(string nombreArchivo)
         {
             try

@@ -76,16 +76,18 @@
             // 
             // txtTelefono
             // 
+            this.txtTelefono.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTelefono.Location = new System.Drawing.Point(253, 196);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(131, 25);
+            this.txtTelefono.Size = new System.Drawing.Size(131, 29);
             this.txtTelefono.TabIndex = 3;
             // 
             // txtDni
             // 
+            this.txtDni.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtDni.Location = new System.Drawing.Point(253, 147);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(131, 25);
+            this.txtDni.Size = new System.Drawing.Size(131, 29);
             this.txtDni.TabIndex = 2;
             // 
             // btnModificar
@@ -121,9 +123,10 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtApellido.Location = new System.Drawing.Point(253, 95);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(131, 25);
+            this.txtApellido.Size = new System.Drawing.Size(131, 29);
             this.txtApellido.TabIndex = 1;
             // 
             // lblApellido
@@ -138,10 +141,10 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtNombre.Location = new System.Drawing.Point(253, 43);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(131, 25);
+            this.txtNombre.Size = new System.Drawing.Size(131, 29);
             this.txtNombre.TabIndex = 0;
             // 
             // lblNombre

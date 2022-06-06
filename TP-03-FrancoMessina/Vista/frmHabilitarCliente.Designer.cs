@@ -78,7 +78,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmHabilitarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmHabilitarCliente";
+            this.Text = "HabilitarCliente";
             this.Load += new System.EventHandler(this.frmHabilitarCliente_Load);
             this.ResumeLayout(false);
 

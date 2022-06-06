@@ -17,6 +17,11 @@ namespace Vista
         {
             this.gestionServicios = gestionServicios;
         }
+        /// <summary>
+        /// Registra el cliente con los datos cargados en los textbox, y si hay algun error en la carga lanza la excepcion especifica.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRegistarse_Click(object sender, EventArgs e)
         {
             try
@@ -58,7 +63,11 @@ namespace Vista
                 MessageBox.Show("Error.Ingrese los datos nuevamente!");
             }
         }
-
+        /// <summary>
+        /// Sale del formulario de Registro.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

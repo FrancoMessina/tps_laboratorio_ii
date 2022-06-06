@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gpbRegistro = new System.Windows.Forms.GroupBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.btnRegistarse = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.gpbRegistro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,18 +63,31 @@
             this.gpbRegistro.TabStop = false;
             this.gpbRegistro.Text = "Cliente";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Location = new System.Drawing.Point(308, 258);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(210, 43);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // txtTelefono
             // 
+            this.txtTelefono.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTelefono.Location = new System.Drawing.Point(253, 196);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(131, 25);
+            this.txtTelefono.Size = new System.Drawing.Size(131, 29);
             this.txtTelefono.TabIndex = 3;
             // 
             // txtDni
             // 
+            this.txtDni.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtDni.Location = new System.Drawing.Point(253, 145);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(131, 25);
+            this.txtDni.Size = new System.Drawing.Size(131, 29);
             this.txtDni.TabIndex = 2;
             // 
             // btnRegistarse
@@ -108,9 +121,10 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtApellido.Location = new System.Drawing.Point(253, 103);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(131, 25);
+            this.txtApellido.Size = new System.Drawing.Size(131, 29);
             this.txtApellido.TabIndex = 1;
             // 
             // lblApellido
@@ -124,9 +138,10 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtNombre.Location = new System.Drawing.Point(253, 55);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(131, 25);
+            this.txtNombre.Size = new System.Drawing.Size(131, 29);
             this.txtNombre.TabIndex = 0;
             // 
             // lblNombre
@@ -137,17 +152,6 @@
             this.lblNombre.Size = new System.Drawing.Size(56, 17);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre";
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnSalir.Location = new System.Drawing.Point(308, 258);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(210, 43);
-            this.btnSalir.TabIndex = 7;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmRegistro
             // 

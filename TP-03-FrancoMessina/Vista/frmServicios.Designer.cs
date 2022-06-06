@@ -32,6 +32,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lstServicios = new System.Windows.Forms.ListBox();
             this.btnCrearTicket = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDatos
@@ -48,7 +49,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnEliminar.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnEliminar.Location = new System.Drawing.Point(340, 253);
+            this.btnEliminar.Location = new System.Drawing.Point(284, 253);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(144, 47);
             this.btnEliminar.TabIndex = 2;
@@ -72,7 +73,7 @@
             // 
             this.btnCrearTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCrearTicket.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnCrearTicket.Location = new System.Drawing.Point(605, 253);
+            this.btnCrearTicket.Location = new System.Drawing.Point(520, 253);
             this.btnCrearTicket.Name = "btnCrearTicket";
             this.btnCrearTicket.Size = new System.Drawing.Size(144, 47);
             this.btnCrearTicket.TabIndex = 4;
@@ -80,12 +81,25 @@
             this.btnCrearTicket.UseVisualStyleBackColor = false;
             this.btnCrearTicket.Click += new System.EventHandler(this.btnCrearTicket_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSalir.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnSalir.Location = new System.Drawing.Point(755, 253);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(144, 47);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // frmServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1237, 331);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCrearTicket);
             this.Controls.Add(this.lstServicios);
             this.Controls.Add(this.btnEliminar);
@@ -107,5 +121,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ListBox lstServicios;
         private System.Windows.Forms.Button btnCrearTicket;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

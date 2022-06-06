@@ -17,10 +17,20 @@ namespace Vista
         {
             this.gestionServicios = gestionServicios;
         }
+        /// <summary>
+        /// Cuando se carga el formulario carga la lista de clientes que estan dados de baja.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmHabilitarCliente_Load(object sender, EventArgs e)
         {
             this.ActualizarListaClientes();
         }
+        /// <summary>
+        /// Valida si existe un cliente en la listbox y si esta seleccionado.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="ClienteNoExistenteException">Lanza la excepcion con el mensaje adecuado.</exception>
         private bool ValidarExisteClienteEnLista()
         {
             int index = lstClientes.SelectedIndex;
@@ -34,13 +44,19 @@ namespace Vista
             }
             return true;
         }
+        /// <summary>
+        /// Actualiza la lista de clientes.
+        /// </summary>
         private void ActualizarListaClientes()
         {
             this.lstClientes.DataSource = null;
             this.lstClientes.DataSource = gestionServicios.ListaClienteBaja();
-
         }
-
+        /// <summary>
+        /// Vuelve a dar a de alta el cliente seleccionado.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnHabilitarCliente_Click(object sender, EventArgs e)
         {
             try
@@ -63,6 +79,11 @@ namespace Vista
                 MessageBox.Show("Error!");
             }
         }
+        /// <summary>
+        /// Sale del formulario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
