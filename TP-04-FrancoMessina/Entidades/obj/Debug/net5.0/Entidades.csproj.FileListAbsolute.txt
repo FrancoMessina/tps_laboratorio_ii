@@ -1,0 +1,36 @@
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\obj\Debug\net5.0\refint\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\Users\franc\OneDrive\Escritorio\TP3\Franco.Messina\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\obj\Debug\net5.0\refint\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\Users\franc\OneDrive\Escritorio\Nueva carpeta\tps_laboratorio_ii\TP-03-FrancoMessina\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\obj\Debug\net5.0\refint\Entidades.dll
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\Users\franc\OneDrive\Escritorio\Todos Los Tps Refactorizados\tps_laboratorio_ii\TP-04-FrancoMessina\Entidades\obj\Debug\net5.0\ref\Entidades.dll
