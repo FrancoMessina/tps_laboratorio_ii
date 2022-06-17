@@ -51,7 +51,7 @@
             // 
             this.btnCrearTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCrearTicket.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnCrearTicket.Location = new System.Drawing.Point(394, 253);
+            this.btnCrearTicket.Location = new System.Drawing.Point(467, 253);
             this.btnCrearTicket.Name = "btnCrearTicket";
             this.btnCrearTicket.Size = new System.Drawing.Size(144, 47);
             this.btnCrearTicket.TabIndex = 4;
@@ -63,7 +63,7 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnSalir.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnSalir.Location = new System.Drawing.Point(648, 253);
+            this.btnSalir.Location = new System.Drawing.Point(705, 253);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(144, 47);
             this.btnSalir.TabIndex = 5;
@@ -75,7 +75,7 @@
             // 
             this.btnCalcularCosto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCalcularCosto.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnCalcularCosto.Location = new System.Drawing.Point(142, 253);
+            this.btnCalcularCosto.Location = new System.Drawing.Point(220, 253);
             this.btnCalcularCosto.Name = "btnCalcularCosto";
             this.btnCalcularCosto.Size = new System.Drawing.Size(144, 47);
             this.btnCalcularCosto.TabIndex = 6;

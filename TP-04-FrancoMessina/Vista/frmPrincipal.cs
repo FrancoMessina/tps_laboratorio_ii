@@ -18,9 +18,7 @@ namespace Vista
             this.gestionServicios = new Administracion();
         }
         /// <summary>
-        /// En la carga del formulario principal. Se intenta serializar(Leer) 
-        /// el archivo ListaDeClientes en formato xml.En caso de existir se muestran los clientes en la listbox. 
-        /// Ruta de donde se lee: En escritorio->Archivos->XML->ListaClientes.XML.
+        /// Lista los clientes con un metodo que los lee desde la base de datos
         /// Caso contrario captura la excepcion pero sin mostrarle al usuario el mensaje de error porque necesita saberlo.
         /// </summary>
         /// <param name="sender"></param>
@@ -29,20 +27,18 @@ namespace Vista
         {
             try
             {
-                //Serializador<List<Cliente>> serializador = new Serializador<List<Cliente>>(GestorDeArchivo.ETipoArchivo.XML);
-                //gestionServicios.ListaClientes = serializador.Leer("ListaClientes.xml");
+                gestionServicios.ListaClientes = ClienteDAO.ListarClientes();
                 ActualizarListaClientes();
-
             }
             catch (Exception)
             {
+                throw;
             }
             finally
             {
                 cmbProductos.DataSource = Enum.GetNames(typeof(EProductos));
                 cmbEntrega.DataSource = Enum.GetValues(typeof(ETipoEntrega));
                 MostrarDatosTv();
-                
             }
         }
         /// <summary>
@@ -191,7 +187,6 @@ namespace Vista
         private void ActualizarListaClientes()
         {
             this.lstClientes.DataSource = null;
-            gestionServicios.ListaClientes = ClienteDAO.ListarClientes();
             this.lstClientes.DataSource = gestionServicios.ListaClienteAlta();
         }
         /// <summary>
@@ -480,8 +475,6 @@ namespace Vista
             }
             
         }
-
-
         /// <summary>
         /// Se abre el formulario para volver a darle el alta  nuevamente a un cliente.
         /// </summary>
@@ -492,6 +485,45 @@ namespace Vista
             frmHabilitarCliente formRegistro = new frmHabilitarCliente(gestionServicios);
             formRegistro.ShowDialog();
             this.ActualizarListaClientes();
+        }
+        /// <summary>
+        /// Ordena los clientes por Nombre.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnOrdenar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.gestionServicios.ListaClientes.Sort((clienteUno, clienteDos) => clienteUno.Nombre.CompareTo(clienteDos.Nombre));
+                this.ActualizarListaClientes();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
+        }
+        /// <summary>
+        /// Importa la lista de XML
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnLeerXML_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Serializador<List<Cliente>> serializador = new Serializador<List<Cliente>>(GestorDeArchivo.ETipoArchivo.XML);
+                gestionServicios.ListaClientes = serializador.Leer("ListaClientes.xml");
+                MessageBox.Show("Lista cargada", "Archivo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+            }
+            finally
+            {
+                this.ActualizarListaClientes();
+            }
         }
     }
 }

@@ -55,6 +55,8 @@
             this.lstClientes = new System.Windows.Forms.ListBox();
             this.btnGuardarClientes = new System.Windows.Forms.Button();
             this.btnRecuperarCliente = new System.Windows.Forms.Button();
+            this.btnOrdenar = new System.Windows.Forms.Button();
+            this.btnLeerXML = new System.Windows.Forms.Button();
             this.gpbProducto.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -341,12 +343,36 @@
             this.btnRecuperarCliente.UseVisualStyleBackColor = true;
             this.btnRecuperarCliente.Click += new System.EventHandler(this.btnRecuperarCliente_Click);
             // 
+            // btnOrdenar
+            // 
+            this.btnOrdenar.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnOrdenar.Location = new System.Drawing.Point(876, 134);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(182, 44);
+            this.btnOrdenar.TabIndex = 13;
+            this.btnOrdenar.Text = "Ordenar Por Nombre";
+            this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
+            // 
+            // btnLeerXML
+            // 
+            this.btnLeerXML.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnLeerXML.Location = new System.Drawing.Point(876, 193);
+            this.btnLeerXML.Name = "btnLeerXML";
+            this.btnLeerXML.Size = new System.Drawing.Size(182, 44);
+            this.btnLeerXML.TabIndex = 14;
+            this.btnLeerXML.Text = "Importar XML";
+            this.btnLeerXML.UseVisualStyleBackColor = true;
+            this.btnLeerXML.Click += new System.EventHandler(this.btnLeerXML_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1093, 673);
+            this.Controls.Add(this.btnLeerXML);
+            this.Controls.Add(this.btnOrdenar);
             this.Controls.Add(this.btnRecuperarCliente);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -398,5 +424,7 @@
         private System.Windows.Forms.Label lblPrecioFinal;
         private System.Windows.Forms.Button btnGuardarClientes;
         private System.Windows.Forms.Button btnRecuperarCliente;
+        private System.Windows.Forms.Button btnOrdenar;
+        private System.Windows.Forms.Button btnLeerXML;
     }
 }

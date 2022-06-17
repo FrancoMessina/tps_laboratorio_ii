@@ -95,7 +95,7 @@ namespace Entidades.ValidacionesCliente
             {
                 throw new NumeroInvalidoExcepction("El Número de telefono tiene que ser númerico!");
             }
-            else if (numeroTel.Length != 10)
+            else if (numeroTel.ContarNumeros() != 10)
             {
                 throw new NumeroInvalidoExcepction("Los numeros telefonicos tienen 10 digitos!");
             }
@@ -103,18 +103,34 @@ namespace Entidades.ValidacionesCliente
         }
         /// <summary>
         /// Verifica que el string solo contenga letras o espacios. Esto ultimo mencionado 
-        /// es para que el apellido pueda ser Del Potro
+        /// es para que el apellido pueda ser por ejemplo: Del Potro
         /// </summary>
         /// <param name="dato">dato a analizar</param>
         /// <returns>Si contiene solo letras retornará true, caso contrario false.</returns>
         public static bool VerificarContieneSoloLetras(this String dato)
         {
+            dato = dato.Trim();
             foreach (char letra in dato)
             {
                 if (!Char.IsLetter(letra) && letra.ToString() != " ")
                     return false;
             }
             return true;
+        }
+        /// <summary>
+        /// Cuenta los numeros de un string extendiendo el tipo de dato String
+        /// </summary>
+        /// <param name="dato">Dato a analizar</param>
+        /// <returns>Retorna un entero</returns>
+        public static int ContarNumeros(this String dato)
+        {
+            int contador = 0;
+            foreach (char item in dato)
+            {
+                if (!Char.IsLetter(item))
+                    contador++;
+            }
+            return contador;
         }
     }
 }

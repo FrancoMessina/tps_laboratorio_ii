@@ -1,187 +1,86 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfCliente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Cliente>
-    <Dni>41195283</Dni>
-    <Nombre>Franco</Nombre>
-    <Apellido>Messina</Apellido>
-    <NumeroTel>1139427762</NumeroTel>
-    <ListaServicios>
-      <Servicio>
-        <Precio>1000</Precio>
-        <TipoEntrega>RetiroLocal</TipoEntrega>
-        <Producto xsi:type="Control">
-          <Marca>Sony</Marca>
-          <Modelo>IR</Modelo>
-          <ListaFallas>
-            <string>NoEmiteSenial</string>
-            <string>NoFuncionaBoton</string>
-          </ListaFallas>
-          <Tipo>TV</Tipo>
-        </Producto>
-      </Servicio>
-      <Servicio>
-        <Precio>11600</Precio>
-        <TipoEntrega>RetiroLocal</TipoEntrega>
-        <Producto xsi:type="AireAcondicionado">
-          <Marca>Surrey</Marca>
-          <Modelo>SoloFrio</Modelo>
-          <ListaFallas>
-            <string>SoloFrio</string>
-            <string>SoloCalor</string>
-          </ListaFallas>
-        </Producto>
-      </Servicio>
-      <Servicio>
-        <Precio>28250</Precio>
-        <TipoEntrega>EnvioDomicilio</TipoEntrega>
-        <Producto xsi:type="Televisor">
-          <Marca>Sony</Marca>
-          <Modelo>T30Pulgadas</Modelo>
-          <ListaFallas>
-            <string>SinAudio</string>
-            <string>PantallaRota</string>
-          </ListaFallas>
-          <Tipo>LED</Tipo>
-        </Producto>
-      </Servicio>
-    </ListaServicios>
-    <DadoDeAlta>false</DadoDeAlta>
-  </Cliente>
-  <Cliente>
-    <Dni>34037812</Dni>
-    <Nombre>Juan Martin</Nombre>
-    <Apellido>Del Potro</Apellido>
-    <NumeroTel>1190807629</NumeroTel>
-    <ListaServicios>
-      <Servicio>
-        <Precio>18950</Precio>
-        <TipoEntrega>RetiroLocal</TipoEntrega>
-        <Producto xsi:type="Televisor">
-          <Marca>Sony</Marca>
-          <Modelo>T30Pulgadas</Modelo>
-          <ListaFallas>
-            <string>SinAudio</string>
-            <string>PantallaRota</string>
-          </ListaFallas>
-          <Tipo>LCD</Tipo>
-        </Producto>
-      </Servicio>
-      <Servicio>
-        <Precio>15500</Precio>
-        <TipoEntrega>RetiroLocal</TipoEntrega>
-        <Producto xsi:type="AireAcondicionado">
-          <Marca>Surrey</Marca>
-          <Modelo>SoloFrio</Modelo>
-          <ListaFallas>
-            <string>PierdeAgua</string>
-            <string>SoloFrio</string>
-          </ListaFallas>
-        </Producto>
-      </Servicio>
-    </ListaServicios>
-    <DadoDeAlta>true</DadoDeAlta>
-  </Cliente>
-  <Cliente>
-    <Dni>39912092</Dni>
-    <Nombre>Lucas</Nombre>
-    <Apellido>Rodriguez</Apellido>
-    <NumeroTel>1140700798</NumeroTel>
-    <ListaServicios>
-      <Servicio>
-        <Precio>1000</Precio>
-        <TipoEntrega>RetiroLocal</TipoEntrega>
-        <Producto xsi:type="Control">
-          <Marca>Surrey</Marca>
-          <Modelo>IR</Modelo>
-          <ListaFallas>
-            <string>BajaSenial</string>
-            <string>DisplayRoto</string>
-          </ListaFallas>
-          <Tipo>Aire</Tipo>
-        </Producto>
-      </Servicio>
-      <Servicio>
-        <Precio>1000</Precio>
-        <TipoEntrega>EnvioDomicilio</TipoEntrega>
-        <Producto xsi:type="Control">
-          <Marca>Sony</Marca>
-          <Modelo>RF</Modelo>
-          <ListaFallas>
-            <string>NoEmiteSenial</string>
-            <string>NoFuncionaBoton</string>
-          </ListaFallas>
-          <Tipo>TV</Tipo>
-        </Producto>
-      </Servicio>
-    </ListaServicios>
-    <DadoDeAlta>true</DadoDeAlta>
-  </Cliente>
-  <Cliente>
-    <Dni>35912893</Dni>
-    <Nombre>Esteban </Nombre>
-    <Apellido>Prieto</Apellido>
-    <NumeroTel>1190762030</NumeroTel>
-    <ListaServicios>
-      <Servicio>
-        <Precio>15500</Precio>
-        <TipoEntrega>RetiroLocal</TipoEntrega>
-        <Producto xsi:type="AireAcondicionado">
-          <Marca>Carrier</Marca>
-          <Modelo>CalorYFrio</Modelo>
-          <ListaFallas>
-            <string>PierdeAgua</string>
-            <string>SoloFrio</string>
-          </ListaFallas>
-        </Producto>
-      </Servicio>
-    </ListaServicios>
-    <DadoDeAlta>true</DadoDeAlta>
-  </Cliente>
-  <Cliente>
     <Dni>10915906</Dni>
     <Nombre>Alejandro</Nombre>
     <Apellido>Bongianni</Apellido>
     <NumeroTel>1190762023</NumeroTel>
     <ListaServicios>
       <Servicio>
-        <Precio>15500</Precio>
-        <TipoEntrega>EnvioDomicilio</TipoEntrega>
+        <Precio>25950</Precio>
+        <TipoEntrega>RetiroLocal</TipoEntrega>
+        <Producto xsi:type="Televisor">
+          <Marca>Sony</Marca>
+          <Modelo>T30Pulgadas</Modelo>
+          <ListaFallas>
+            <string>SinAudio</string>
+            <string>PantallaRota</string>
+            <string>SinImagen</string>
+          </ListaFallas>
+          <Tipo>LCD</Tipo>
+        </Producto>
+        <DniCliente>10915906</DniCliente>
+      </Servicio>
+      <Servicio>
+        <Precio>21100</Precio>
+        <TipoEntrega>RetiroLocal</TipoEntrega>
         <Producto xsi:type="AireAcondicionado">
-          <Marca>Carrier</Marca>
+          <Marca>Surrey</Marca>
           <Modelo>SoloFrio</Modelo>
           <ListaFallas>
             <string>PierdeAgua</string>
             <string>SoloFrio</string>
+            <string>SoloCalor</string>
           </ListaFallas>
         </Producto>
+        <DniCliente>10915906</DniCliente>
       </Servicio>
       <Servicio>
-        <Precio>300</Precio>
-        <TipoEntrega>EnvioDomicilio</TipoEntrega>
+        <Precio>900</Precio>
+        <TipoEntrega>RetiroLocal</TipoEntrega>
         <Producto xsi:type="Control">
           <Marca>Surrey</Marca>
           <Modelo>IR</Modelo>
           <ListaFallas>
+            <string>NoEmiteSenial</string>
             <string>BajaSenial</string>
+            <string />
           </ListaFallas>
           <Tipo>Aire</Tipo>
         </Producto>
+        <DniCliente>10915906</DniCliente>
       </Servicio>
       <Servicio>
-        <Precio>28250</Precio>
+        <Precio>15500</Precio>
         <TipoEntrega>RetiroLocal</TipoEntrega>
-        <Producto xsi:type="Televisor">
-          <Marca>Hitachi</Marca>
-          <Modelo>T40Pulgadas</Modelo>
+        <Producto xsi:type="AireAcondicionado">
+          <Marca>Samsung</Marca>
+          <Modelo>SoloFrio</Modelo>
           <ListaFallas>
-            <string>SinAudio</string>
-            <string>PantallaRota</string>
+            <string>PierdeAgua</string>
+            <string>SoloFrio</string>
+            <string />
           </ListaFallas>
-          <Tipo>LED</Tipo>
         </Producto>
+        <DniCliente>10915906</DniCliente>
+      </Servicio>
+      <Servicio>
+        <Precio>1000</Precio>
+        <TipoEntrega>RetiroLocal</TipoEntrega>
+        <Producto xsi:type="Control">
+          <Marca>Surrey</Marca>
+          <Modelo>RF</Modelo>
+          <ListaFallas>
+            <string>BajaSenial</string>
+            <string>DisplayRoto</string>
+            <string />
+          </ListaFallas>
+          <Tipo>Aire</Tipo>
+        </Producto>
+        <DniCliente>10915906</DniCliente>
       </Servicio>
     </ListaServicios>
-    <DadoDeAlta>false</DadoDeAlta>
+    <DadoDeAlta>true</DadoDeAlta>
   </Cliente>
   <Cliente>
     <Dni>30910905</Dni>
@@ -191,16 +90,96 @@
     <ListaServicios>
       <Servicio>
         <Precio>1000</Precio>
-        <TipoEntrega>RetiroLocal</TipoEntrega>
+        <TipoEntrega>EnvioDomicilio</TipoEntrega>
         <Producto xsi:type="Control">
-          <Marca>Sony</Marca>
-          <Modelo>IR</Modelo>
+          <Marca>Surrey</Marca>
+          <Modelo>RF</Modelo>
           <ListaFallas>
-            <string>NoEmiteSenial</string>
-            <string>NoFuncionaBoton</string>
+            <string>BajaSenial</string>
+            <string>DisplayRoto</string>
+            <string />
           </ListaFallas>
-          <Tipo>TV</Tipo>
+          <Tipo>Aire</Tipo>
         </Producto>
+        <DniCliente>30910905</DniCliente>
+      </Servicio>
+      <Servicio>
+        <Precio>28250</Precio>
+        <TipoEntrega>RetiroLocal</TipoEntrega>
+        <Producto xsi:type="Televisor">
+          <Marca>Philips</Marca>
+          <Modelo>T40Pulgadas</Modelo>
+          <ListaFallas>
+            <string>SinAudio</string>
+            <string>PantallaRota</string>
+            <string />
+          </ListaFallas>
+          <Tipo>LED</Tipo>
+        </Producto>
+        <DniCliente>30910905</DniCliente>
+      </Servicio>
+    </ListaServicios>
+    <DadoDeAlta>true</DadoDeAlta>
+  </Cliente>
+  <Cliente>
+    <Dni>31093020</Dni>
+    <Nombre>Pepe</Nombre>
+    <Apellido>Argento</Apellido>
+    <NumeroTel>1130908080</NumeroTel>
+    <ListaServicios>
+      <Servicio>
+        <Precio>1000</Precio>
+        <TipoEntrega>EnvioDomicilio</TipoEntrega>
+        <Producto xsi:type="Control">
+          <Marca>Surrey</Marca>
+          <Modelo>RF</Modelo>
+          <ListaFallas>
+            <string>BajaSenial</string>
+            <string>DisplayRoto</string>
+            <string />
+          </ListaFallas>
+          <Tipo>Aire</Tipo>
+        </Producto>
+        <DniCliente>31093020</DniCliente>
+      </Servicio>
+    </ListaServicios>
+    <DadoDeAlta>true</DadoDeAlta>
+  </Cliente>
+  <Cliente>
+    <Dni>34037812</Dni>
+    <Nombre>Juan Martin</Nombre>
+    <Apellido>Del Potro</Apellido>
+    <NumeroTel>1190807629</NumeroTel>
+    <ListaServicios>
+      <Servicio>
+        <Precio>28250</Precio>
+        <TipoEntrega>RetiroLocal</TipoEntrega>
+        <Producto xsi:type="Televisor">
+          <Marca>Philips</Marca>
+          <Modelo>T40Pulgadas</Modelo>
+          <ListaFallas>
+            <string>SinAudio</string>
+            <string>PantallaRota</string>
+            <string />
+          </ListaFallas>
+          <Tipo>LED</Tipo>
+        </Producto>
+        <DniCliente>34037812</DniCliente>
+      </Servicio>
+      <Servicio>
+        <Precio>25950</Precio>
+        <TipoEntrega>RetiroLocal</TipoEntrega>
+        <Producto xsi:type="Televisor">
+          <Marca>Sony</Marca>
+          <Modelo>T30Pulgadas</Modelo>
+          <ListaFallas>
+            <string>SinAudio</string>
+            <string>PantallaRota</string>
+            <string>SinImagen</string>
+          </ListaFallas>
+          <Tipo>LCD</Tipo>
+        </Producto>
+        <DniCliente>34037812</DniCliente>
       </Servicio>
     </ListaServicios>
     <DadoDeAlta>true</DadoDeAlta>

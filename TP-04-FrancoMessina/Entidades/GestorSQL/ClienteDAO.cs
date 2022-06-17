@@ -14,8 +14,13 @@ namespace Entidades.GestorSQL
 
         static ClienteDAO()
         {
-            ClienteDAO.cadenaConexion = "Server=.;Database=TP4;Trusted_Connection=True;";
+            ClienteDAO.cadenaConexion = "Server=.;Database=TP4FRANCOMESSINA;Trusted_Connection=True;";
         }
+        /// <summary>
+        /// Lee los datos de los clientes
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="CargaInvalidaSQLException">Cualquier error lanza esta excepcion</exception>
         private static List<Cliente> LeerDatosClientes()
         {
             try
@@ -43,16 +48,18 @@ namespace Entidades.GestorSQL
                 }
                 return lista;
             }
-            catch (CargaInvalidaSQLException)
+            catch (Exception)
             {
                 throw new CargaInvalidaSQLException("Error al leer los datos de los clientes");
             }
-            catch (Exception)
-            {
-                throw new Exception("Error");
-            }
             
         }
+
+        /// <summary>
+        /// Lee los servicios de un cliente cuando su dni coincide con algun dni de la tabla Servicios.
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <exception cref="CargaInvalidaSQLException">Cualquier error lanza esta excepcion</exception>
         private static void LeerServiciosDeCliente(Cliente cliente)
         {
             try
@@ -102,16 +109,17 @@ namespace Entidades.GestorSQL
                     cliente.ListaServicios = lista;
                 }
             }
-            catch (CargaInvalidaSQLException)
+            catch (Exception)
             {
                 throw new CargaInvalidaSQLException("Error al leer los datos de los servicios");
             }
-            catch (Exception)
-            {
-                throw new Exception("Error");
-            }
             
         }
+        /// <summary>
+        /// Lista los clientes  y le agrega los servicios que le corresponde a cada cliente.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="CargaInvalidaSQLException">Cualquier error lanza esta excepcion</exception>
         public static List<Cliente> ListarClientes()
         {
             try
@@ -123,15 +131,16 @@ namespace Entidades.GestorSQL
                 }
                 return listaCliente;
             }
-            catch (CargaInvalidaSQLException)
+            catch (Exception)
             {
                 throw new CargaInvalidaSQLException("Error al listar todos los clientes");
             }
-            catch (Exception)
-            {
-                throw new Exception("Error");
-            }
         }
+        /// <summary>
+        /// Da de alta un cliente y lo inserta en la tabla de Clientes.
+        /// </summary>
+        /// <param name="cliente">Cliente a dar de alta</param>
+        /// <exception cref="CargaInvalidaSQLException">Cualquier error lanza esta excepcion</exception>
         public static void AltaCliente(Cliente cliente)
         {
             string query = "Insert into Clientes (dni,nombre,apellido,numeroTel,dadoDeAlta) values(@dni,@nombre,@apellido,@numeroTel,@dadoDeAlta)";
@@ -149,16 +158,18 @@ namespace Entidades.GestorSQL
                     cmd.ExecuteNonQuery();
                 }              
             }
-            catch (CargaInvalidaSQLException)
+            catch (Exception)
             {
                 throw new CargaInvalidaSQLException("Error al dar de alta el cliente");
             }
-            catch (Exception)
-            {
-                throw new Exception("Error");
-            }
 
         }
+        /// <summary>
+        /// Alta de un servicio con el dni respectivo del cliente.
+        /// </summary>
+        /// <param name="servicio">Servicio a agregar</param>
+        /// <param name="dni">Dni del cliente</param>
+        /// <exception cref="CargaInvalidaSQLException">Cualquier error lanza esta excepcion</exception>
         public static void AltaServicio(Servicio servicio, string dni)
         {
             string query = "Insert into Servicios (precio,tipoEntrega,dni_cliente,nombre,marca,modelo,fallaUno,fallaDos,fallaTres,tipo) values(@precio,@tipoEntrega,@dni_Cliente,@nombre,@marca,@modelo,@fallaUno,@fallaDos,@fallaTres,@tipo)";
@@ -187,16 +198,17 @@ namespace Entidades.GestorSQL
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch (CargaInvalidaSQLException)
+            catch (Exception)
             {
                 throw new CargaInvalidaSQLException("Error al dar de alta el cliente");
             }
-            catch (Exception)
-            {
-                throw new Exception("Error");
-            }
 
         }
+        /// <summary>
+        /// Baja logica se pone el bit de dadoDeAlta en 0
+        /// </summary>
+        /// <param name="cliente">Cliente a dar de baja</param>
+        /// <exception cref="CargaInvalidaSQLException">Cualquier error lanza esta excepcion</exception>
         public static void BajaCliente(Cliente cliente)
         {
             try
@@ -210,15 +222,16 @@ namespace Entidades.GestorSQL
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch (CargaInvalidaSQLException)
+            catch (Exception)
             {
                 throw new CargaInvalidaSQLException("Error al dar de baja el cliente");
             }
-            catch (Exception)
-            {
-                throw new Exception("Error");
-            }
         }
+        /// <summary>
+        /// Recuperar cliente cargandole un 1 al bit dadoDeAlta
+        /// </summary>
+        /// <param name="cliente">Cliente a recuperar</param>
+        /// <exception cref="CargaInvalidaSQLException">Cualquier error lanza esta excepcion</exception>
         public static void RecuperarCliente(Cliente cliente)
         {
             try
@@ -232,15 +245,16 @@ namespace Entidades.GestorSQL
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch (CargaInvalidaSQLException)
+            catch (Exception)
             {
                 throw new CargaInvalidaSQLException("Error al recuperar cliente");
             }
-            catch (Exception)
-            {
-                throw new Exception("Error");
-            }
         }
+        /// <summary>
+        /// Se updatea en la base con los datos del cliente modificado.
+        /// </summary>
+        /// <param name="cliente">Cliente a modificar</param>
+        /// <exception cref="CargaInvalidaSQLException">Cualquier error lanza esta excepcion</exception>
         public static void ModificarCliente(Cliente cliente)
         {
             try
@@ -258,15 +272,17 @@ namespace Entidades.GestorSQL
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch (CargaInvalidaSQLException)
+            catch (Exception)
             {
                 throw new CargaInvalidaSQLException("Error al modificar cliente");
             }
-            catch (Exception)
-            {
-                throw new Exception("Error");
-            }
         }
+        /// <summary>
+        /// Metodo para cargar las fallas que sean necesarias que no lance una excepcion.
+        /// Por ejemplo: Si el servicio tiene dos fallas se crea una lista con esas dos fallas y la tercera con un empty.
+        /// </summary>
+        /// <param name="lista">La lista de fallas a analizar</param>
+        /// <returns>Retorna la lista de fallas.</returns>
         private static List<string> CargarFallas(List<string> lista)
         {
             for(int i = lista.Count; i >= 0; i--)

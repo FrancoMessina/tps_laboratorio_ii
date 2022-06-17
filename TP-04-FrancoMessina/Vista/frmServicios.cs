@@ -30,7 +30,19 @@ namespace Vista
         /// <param name="e"></param>
         private void frmServicios_Load(object sender, EventArgs e)
         {
-            this.ActualizarListaServicios();
+            try
+            {
+                this.cliente.ListaServicios.Sort((servicioUno, servicioDos) => servicioUno.Precio.CompareTo(servicioDos.Precio));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                this.ActualizarListaServicios();
+            }
         }
         /// <summary>
         /// Actualiza la lista de servicios
@@ -107,15 +119,27 @@ namespace Vista
         {
             this.DialogResult = DialogResult.Cancel;
         }
-
+        /// <summary>
+        /// El evento InformacionDeCostoFinal se va a suscribir al metodo CalcularCostoFinal
+        /// El evento InformacionDeTiempo se va a suscribir al metodo CargandoCosto
+        /// Se deshabilita el boton CalcularCosto
+        /// Un run de la nueva tarea en otro hilo utilizando el metodo IniciarCalculo.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCalcularCosto_Click(object sender, EventArgs e)
         {
-            gestionCostos.InformacionDeCostoFinal += CalcularCostoFinal;
-            gestionCostos.InformacionDeTiempo += CargandoCosto;
+            gestionCostos.InformarCostoFinal += CalcularCostoFinal;
+            gestionCostos.InformarTiempo += CargandoCosto;
             List<Servicio> listaAux = gestionServicios.ListaClientes[indexCliente].ListaServicios;
             btnCalcularCosto.Enabled = false;
             Task tarea = Task.Run(() => gestionCostos.IniciarCalculo(listaAux));
         }
+        /// <summary>
+        /// Se pregunta si se quiere modificar el lblFinal si la prop InvokeRequired da true 
+        /// se hace un callback y luego entra al else modificando el control.
+        /// </summary>
+        /// <param name="precioFinal">Precio Final del calculo</param>
         public void CalcularCostoFinal(float precioFinal)
         {
             if (this.InvokeRequired)
@@ -128,6 +152,11 @@ namespace Vista
                 lblCostoFinal.BackColor = Color.Green;
             }
         }
+        /// <summary>
+        /// Se pregunta si se quiere modificar el lblCostoFinal si la prop InvokeRequired da true 
+        /// se hace un callback y luego entra al else modificando el control.
+        /// </summary>
+        /// <param name="tiempo">Tiempo que tarda para cargar el costo</param>
         public void CargandoCosto(int tiempo)
         {
             if (this.InvokeRequired)
